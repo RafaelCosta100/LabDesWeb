@@ -1,13 +1,9 @@
 import {Router, Request, Response} from 'express';
-import {IProduct} from '../interfaces/IProduct';
-
+import { listProduct } from '../controller/productController';
 export const productRouter = Router();
 
-productRouter.get('/', (_req: Request, res: Response) => {
-  const product: IProduct = {
-    name: 'Bolacha',
-    brand: 'Trakinas',
-  };
+productRouter.get('/', async (_req: Request, res: Response) => {
+  const products = await listProduct();
 
-  res.json([product]);
+  res.json(products)
 });
