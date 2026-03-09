@@ -4,14 +4,13 @@
 */
 describe("", () =>{
 /**
- * test: testes individuais
+ * test / it: testes individuais
  * teste de cada possivel cenário de sucesso ou erro
  */
-    test("",()=>{
+    test("",()=>{});
 
-});
+    test('format currency (5.31) => R$5,31',() =>{});
 
-    test("",() =>{
-
-});
+    it("should return R$5,31 when value = 5.31", () =>{});
+    // AAA - Arange
 });
