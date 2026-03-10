@@ -1,16 +1,32 @@
+import { formatCurrency } from "../../../src/helpers/formatCurrency";
+
 /** 
  *  describe: suites de testes => agrupamentos
  *  
 */
-describe("", () =>{
+describe('formatCurrency', () =>{
+    beforeAll(() => {
+        //instruções a serem executadas antes de todos os testes da suite
+    })
+    afterAll(() =>{
+        //instruções a serem executadas após todos os testes da suite
+    })
+    beforeEach(()=>{
+        //instruções a serem executadas antes de cada teste da suite
+    })
+    //afterEach...
 /**
  * test / it: testes individuais
  * teste de cada possivel cenário de sucesso ou erro
  */
-    test("",()=>{});
-
-    test('format currency (5.31) => R$5,31',() =>{});
+   // test('format currency (5.31) => R$5,31',() =>{});
 
     it("should return R$5,31 when value = 5.31", () =>{});
-    // AAA - Arange
+    // AAA - Arange, Act, Assert
+    //Arange
+    const value = 5.31;
+    //Act
+    const formattedValue = formatCurrency(value);
+    //Assert
+    expect(formattedValue).toContain('5,31');
 });
