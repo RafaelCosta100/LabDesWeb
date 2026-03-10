@@ -28,5 +28,5 @@ describe('formatCurrency', () =>{
     //Act
     const formattedValue = formatCurrency(value);
     //Assert
-    expect(formattedValue).toContain('5,31');
+    expect(formattedValue).toEqual('R$5,31');
 });
